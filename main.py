@@ -1,8 +1,9 @@
 import numpy as np
 from markov_functions import markov
 
-matriz = np.array([[0.52, 0.3, 0.18], [0.23, 0.35, 0.42], [0.07, 0.24, 0.69]])
-vector = np.array([0, 1, 0])
-iteraciones = 3
+matriz = np.array([[0.1, 0.3, 0.6], [0.2, 0.2, 0.6], [0.2, 0.4, 0.4]])
+vector = np.array([1, 0, 0])
+iteraciones = 7
 print("Aquí están las probabilidades resultantes \n")
-print(markov(vector, matriz, iteraciones))
+markov(vector, matriz, iteraciones)
+# Debo solucionar algun error en la formula

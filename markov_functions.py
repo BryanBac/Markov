@@ -3,7 +3,7 @@ import numpy as np
 
 def multiply(vector: np.ndarray, matriz: np.ndarray):
     r1: np.ndarray = vector.dot(matriz)
-    return r1;
+    return r1
 
 
 def pot(m1: np.ndarray, value: int):
@@ -12,6 +12,6 @@ def pot(m1: np.ndarray, value: int):
 
 
 def markov(vector: np.ndarray, m1: np.ndarray, value: int):
-    matriz = pot(m1, value)
-    result = multiply(vector, matriz)
-    return result
+    for i in range(value+1):
+        print(f"Iteración {i}", vector)
+        vector = multiply(vector, m1)
